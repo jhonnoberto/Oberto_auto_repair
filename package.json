@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "node-sass --include-path scss scss/main.scss public/css/app.css",
+    "prod": "npm run production",
+    "production": "node-sass --include-path scss scss/main.scss public/css/app.css --output-style compressed",
+    "watch": "nodemon -e scss -x \"npm run development\"",
+    "watch-prod": "nodemon -e scss -x \"npm run production\""
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fullcalendar/core": "^4.4.0",
+    "@fullcalendar/daygrid": "^4.4.0",
+    "@fullcalendar/resource-timeline": "^4.4.0"
+  }
+}

@@ -1,0 +1,80 @@
+.topbar {
+    text-align: center;
+    list-style: none;
+    background: black;
+
+    ul {
+        margin-bottom: unset;
+        padding: 15px; 
+        list-style: none;
+        
+        .topbar__brand {
+            display: block;
+
+            @include respond-below(sm) {
+                background-size: 40%;            
+            }
+
+
+            img {
+                width: 27%;
+                padding-bottom: 15px;
+
+                @include respond-above(xl) {
+                    width: 30%;
+                }
+
+                @include respond-below(sm) {
+                    width: 50%;
+                }
+            }
+        }
+
+        .topbar__item {
+            font-family: 'Roboto', sans-serif;
+            display: inline;
+            padding: 12px 18px;
+            font-size: 18px;
+
+            // Hidden Items in Mobile
+            @include respond-below(sm) {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: 550;
+                color: white;
+                transition: ease 0.4s;
+
+                @include respond-above(xl) {
+                    font-size: 24px;
+                }
+
+                @include respond-above(4k) {
+                    font-size: 45px;
+                }
+
+                &:hover {
+                   color: #9DB800;
+                }
+            }
+        }
+        .topbar__item--icon {
+            color: white;
+            font-size: 16px;
+            // Manera 1
+            display: none;
+
+            @include respond-below(sm) {
+                display: block;
+                float: right;
+                margin-top: -55px;
+            }
+        }
+    }
+}
+
+
+
+
